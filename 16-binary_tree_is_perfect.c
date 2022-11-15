@@ -17,7 +17,9 @@ int check_depth(const binary_tree_t *tree)
 
 /**
  * is_perfect - checks recursively if a binary tree is perfect
- * @:
+ * @tree: pointer to root of node to check
+ * @height: height of left side branch of tree
+ * @level: current visitation level as we traverse down the tree
  *
  * Return: 1 if perfect, otherwise 0
  */
