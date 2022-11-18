@@ -34,13 +34,12 @@ void levelorder(int level, int i, const binary_tree_t *tree, void (*func)(int))
 	if (tree == NULL || i > level)
 		return;
 
-	if (level == 0)
-		func(tree->n);
-
 	if (i != level)
 	{
 		levelorder(level, i + 1, tree->left, func);
 		levelorder(level, i + 1, tree->right, func);
+
+		return;
 	}
 	func(tree->n);
 }
